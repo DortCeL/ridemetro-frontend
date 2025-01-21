@@ -16,6 +16,6 @@
 	}
 
 	.clock-cell {
-		@apply text-3xl p-2 min-w-16 bg-white border-green-600 border-2 rounded-lg inline-flex justify-center items-center;
+		@apply text-3xl p-2 min-w-16 bg-transparent  rounded-lg inline-flex justify-center items-center;
 	}
 }
