@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+	scroll-behavior: smooth;
+}
+
 @layer components {
 	.btn {
 		@apply px-4 py-2 rounded-lg font-medium inline-flex justify-center items-center tracking-tight;

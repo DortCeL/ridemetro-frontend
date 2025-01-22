@@ -29,7 +29,7 @@ export const Header = () => {
 
 						<nav className='hidden md:flex gap-6 text-black/60 items-center'>
 							<a href='#'>Guide</a>
-							<a href='#'>Pricing</a>
+							<a href='#pricing'>Pricing</a>
 							<a href='#'>Lost & Found</a>
 							<a href='#'>Map</a>
 							<button className='btn btn-primary'>Log In</button>

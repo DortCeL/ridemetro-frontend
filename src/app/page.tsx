@@ -1,7 +1,7 @@
 import { Header } from "@/sections/Header";
 import { Hero } from "@/sections/Hero";
 import CustomMarquee from "@/components/CustomMarquee";
-import { TicketPrice } from "@/sections/TicketPrice";
+import { Pricing } from "@/sections/Pricing";
 
 export default function Home() {
 	return (
@@ -9,7 +9,7 @@ export default function Home() {
 			<Header />
 			<Hero />
 			<CustomMarquee />
-			<TicketPrice />
+			<Pricing />
 		</>
 	);
 }

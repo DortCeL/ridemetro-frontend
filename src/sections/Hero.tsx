@@ -2,6 +2,7 @@ import ArrowIcon from "@/assets/arrow-right.svg";
 import metroImage from "@/assets/metro.png";
 import cogImage from "@/assets/cog.png";
 import noodleImage from "@/assets/noodle.png";
+import overpassImage from "@/assets/overpass.png";
 import cylinderImage from "@/assets/cylinder.png";
 import Image from "next/image";
 
@@ -59,9 +60,17 @@ export const Hero = () => {
 							className='hidden md:block md:absolute -left-32 -top-8'
 						/> */}
 
-						{/* <Image
+						<Image
 							src={noodleImage}
 							alt='noodle image'
+							height={220}
+							width={220}
+							className='hidden lg:block absolute top-[524px] left-[448px] rotate-[30deg]'
+						/>
+
+						{/* <Image
+							src={overpassImage}
+							alt='overpass image'
 							height={220}
 							width={220}
 							className='hidden lg:block absolute top-[524px] left-[448px] rotate-[30deg]'
