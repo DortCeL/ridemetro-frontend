@@ -6,7 +6,25 @@ export const PriceChecker = () => {
 	const [to, setTo] = useState("");
 	const [price, setPrice] = useState(null);
 
-	const locations = ["New York", "Los Angeles", "Chicago", "Miami", "Dallas"];
+	const locations = [
+		"Uttara North",
+		"Uttara Center",
+		"Uttara South",
+		"Pallabi",
+		"Mirpur-11",
+		"Mirpur-10",
+		"Kazipara",
+		"Shewrapara",
+		"Agargaon",
+		"Bijoy Sarani",
+		"Farmgate",
+		"Karwan Bazar",
+		"Shahbagh",
+		"Dhaka University",
+		"Bangladesh Secretariat",
+		"Motijheel",
+		"Kamalapur",
+	];
 
 	const calculatePrice = () => {
 		if (from && to && from !== to) {

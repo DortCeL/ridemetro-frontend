@@ -10,7 +10,7 @@ import Clock from "@/components/Clock";
 
 export const Hero = () => {
 	return (
-		<section className='pt-8 pb-20 md:pt-8 md:pb-10 overflow-x-clip bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#c68642,#EAEEFE_100%)]'>
+		<section className='pt-8 pb-20 border-b-4 border-black/80 md:pt-8 md:pb-10 overflow-x-clip bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#c68642,#EAEEFE_100%)]'>
 			<div className='container'>
 				<div className='md:flex items-center'>
 					{/*//! Text Section */}
@@ -31,8 +31,10 @@ export const Hero = () => {
 							ticketing, and real-time updates.
 						</p>
 						<div className='flex gap-1 items-center mt-[30px]'>
-							<button className='btn btn-primary'>See ticket price</button>
-							<button className='btn btn-text gap-1'>
+							<button className='btn btn-primary'>
+								<a href='#pricing'>See ticket price</a>
+							</button>
+							<button className='btn btn-text gap-1  hover:animate-bounce'>
 								<span>Learn more</span>
 								<ArrowIcon className='h-5 w-5' />
 							</button>
@@ -65,7 +67,7 @@ export const Hero = () => {
 							alt='noodle image'
 							height={220}
 							width={220}
-							className='hidden lg:block absolute top-[524px] left-[448px] rotate-[30deg]'
+							className='hidden lg:block absolute top-[530px] left-[448px] rotate-[30deg]'
 						/>
 
 						{/* <Image

@@ -24,12 +24,20 @@ export default function Clock() {
 	}, [currentSecond]);
 
 	return currentHour && currentMinute ? (
-		<div className='flex items-center gap-1'>
-			<p className='clock-cell'>{currentHour}</p>
-			<p>:</p>
-			<p className='clock-cell'>{currentMinute}</p>
-			<p>:</p>
-			<p className='clock-cell'>{currentSecond}</p>
+		<div className='flex flex-col '>
+			<div>
+				{/* //* For now, date is fetched only once */}
+				<p className='text-sm text-center tracking-widest translate-y-2 text-slate-600'>
+					{d.toLocaleDateString()}
+				</p>
+			</div>
+			<div className='flex items-center gap-1'>
+				<p className='clock-cell'>{currentHour}</p>
+				<p>:</p>
+				<p className='clock-cell'>{currentMinute}</p>
+				<p>:</p>
+				<p className='clock-cell'>{currentSecond}</p>
+			</div>
 		</div>
 	) : (
 		<p className='flex items-center'>Getting time...</p>
