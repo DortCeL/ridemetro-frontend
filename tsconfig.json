@@ -27,7 +27,8 @@
 		"**/*.tsx",
 		".next/types/**/*.ts",
 		"src/components/Clock.jsx",
-		"src/sections/Pricing.jsx"
+		"src/sections/Pricing.jsx",
+		"src/app/lostandfound/page.jsx"
 	],
 	"exclude": ["node_modules"]
 }

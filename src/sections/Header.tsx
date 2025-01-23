@@ -38,7 +38,7 @@ export const Header = () => {
 							<Link href='/#pricing' passHref>
 								Pricing
 							</Link>
-							<Link href='/' passHref>
+							<Link href='/lostandfound' passHref>
 								Lost & Found
 							</Link>
 							<Link href='/' passHref>
