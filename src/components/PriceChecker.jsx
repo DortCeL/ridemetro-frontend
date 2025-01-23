@@ -45,7 +45,7 @@ export const PriceChecker = () => {
 				<div>
 					<label className='block text-gray-700 font-medium mb-2'>From:</label>
 					<select
-						className='w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
+						className='w-full p-3 border rounded-full focus:outline-none'
 						value={from}
 						onChange={(e) => setFrom(e.target.value)}
 					>
@@ -60,7 +60,7 @@ export const PriceChecker = () => {
 				<div>
 					<label className='block text-gray-700 font-medium mb-2'>To:</label>
 					<select
-						className='w-full p-3 border rounded-lg focus:outline-none '
+						className='w-full p-3 border rounded-full focus:outline-none '
 						value={to}
 						onChange={(e) => setTo(e.target.value)}
 					>
