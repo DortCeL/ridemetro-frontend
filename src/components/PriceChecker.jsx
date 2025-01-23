@@ -1,6 +1,14 @@
 "use client";
 import { useState } from "react";
 
+import {
+	Select,
+	SelectContent,
+	SelectItem,
+	SelectTrigger,
+	SelectValue,
+} from "@/components/ui/select";
+
 export const PriceChecker = () => {
 	const [from, setFrom] = useState("");
 	const [to, setTo] = useState("");
@@ -28,9 +36,9 @@ export const PriceChecker = () => {
 
 	const calculatePrice = () => {
 		if (from && to && from !== to) {
-			const basePrice = 100; // Base price in USD
-			const randomFactor = Math.random() * 100; // Random fluctuation
-			setPrice((basePrice + randomFactor).toFixed(2));
+			const basePrice = 20; // Base price
+			const randomFactor = Math.random() * 10;
+			setPrice((basePrice + randomFactor).toFixed(0));
 		} else {
 			setPrice("Invalid selection");
 		}
@@ -44,7 +52,24 @@ export const PriceChecker = () => {
 			<div className='space-y-4'>
 				<div>
 					<label className='block text-gray-700 font-medium mb-2'>From:</label>
-					<select
+
+					<Select
+						value={from}
+						onValueChange={(value) => setFrom(value)} // Use the value directly
+					>
+						<SelectTrigger className='w-full'>
+							<SelectValue placeholder='Select a location' />
+						</SelectTrigger>
+						<SelectContent>
+							{locations.map((location) => (
+								<SelectItem key={location} value={location}>
+									{location}
+								</SelectItem>
+							))}
+						</SelectContent>
+					</Select>
+
+					{/* <select
 						className='w-full p-3 border rounded-full focus:outline-none'
 						value={from}
 						onChange={(e) => setFrom(e.target.value)}
@@ -55,22 +80,25 @@ export const PriceChecker = () => {
 								{location}
 							</option>
 						))}
-					</select>
+					</select> */}
 				</div>
 				<div>
 					<label className='block text-gray-700 font-medium mb-2'>To:</label>
-					<select
-						className='w-full p-3 border rounded-full focus:outline-none '
+					<Select
 						value={to}
-						onChange={(e) => setTo(e.target.value)}
+						onValueChange={(value) => setTo(value)} // Use the value directly
 					>
-						<option value=''>Select a location</option>
-						{locations.map((location) => (
-							<option key={location} value={location}>
-								{location}
-							</option>
-						))}
-					</select>
+						<SelectTrigger className='w-full'>
+							<SelectValue placeholder='Select a location' />
+						</SelectTrigger>
+						<SelectContent>
+							{locations.map((location) => (
+								<SelectItem key={location} value={location}>
+									{location}
+								</SelectItem>
+							))}
+						</SelectContent>
+					</Select>
 				</div>
 				<button
 					className='w-full bg-black text-white py-3 rounded-lg font-semibold transition duration-300'
@@ -86,7 +114,7 @@ export const PriceChecker = () => {
 							</p>
 						) : (
 							<p>
-								Ticket Price: <span className='text-green-500'>${price}</span>
+								Ticket Price: <span className='text-green-500'>৳ {price}</span>
 							</p>
 						)}
 					</div>

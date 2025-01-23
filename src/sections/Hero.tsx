@@ -10,7 +10,7 @@ import Clock from "@/components/Clock";
 
 export const Hero = () => {
 	return (
-		<section className='pt-8 pb-20 border-b-4 border-black/80 md:pt-8 md:pb-10 overflow-x-clip bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#c68642,#EAEEFE_100%)]'>
+		<section className='pt-8 pb-20 border-b-4 border-black/80 md:pt-8 md:pb-10 overflow-x-clip bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#c68642,#e7e4d9_100%)]'>
 			<div className='container'>
 				<div className='md:flex items-center'>
 					{/*//! Text Section */}
