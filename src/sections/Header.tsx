@@ -42,7 +42,10 @@ export const Header = () => {
 								Lost & Found
 							</Link>
 							<Link href='/' passHref>
-								Map
+								Complaints
+							</Link>
+							<Link href='/' passHref>
+								Details
 							</Link>
 							<button className='btn btn-primary animate-bounce'>Log In</button>
 						</nav>
