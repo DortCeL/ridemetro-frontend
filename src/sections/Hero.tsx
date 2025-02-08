@@ -4,6 +4,8 @@ import cogImage from "@/assets/cog.png";
 import noodleImage from "@/assets/noodle.png";
 import overpassImage from "@/assets/overpass.png";
 import cylinderImage from "@/assets/cylinder.png";
+
+import Tree from "@/assets/tree.png";
 import Image from "next/image";
 
 import Clock from "@/components/Clock";
@@ -62,13 +64,18 @@ export const Hero = () => {
 							className='hidden md:block md:absolute -left-32 -top-8'
 						/> */}
 
-						<Image
-							src={noodleImage}
-							alt='noodle image'
-							height={220}
-							width={220}
-							className='hidden lg:block absolute top-[530px] left-[448px] rotate-[30deg]'
+						{/* <Image
+							src={Tree}
+							alt='tree image'
+							height={800}
+							className='hidden lg:block z-5 absolute top-[200px] left-[560px] rotate-[-50deg] '
 						/>
+						<Image
+							src={Tree}
+							alt='tree image'
+							height={1000}
+							className='hidden lg:block z-5 absolute top-[300px] left-[-1000px] '
+						/> */}
 
 						{/* <Image
 							src={overpassImage}

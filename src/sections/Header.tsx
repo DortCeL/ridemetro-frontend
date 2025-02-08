@@ -11,11 +11,6 @@ export const Header = () => {
 				<p className='text-white/60 hidden md:block'>
 					Seamless commute all over Dhaka City
 				</p>
-
-				<div className='inline-flex gap-1 items-center'>
-					<p>Login to get started</p>
-					<ArrowRight className='h-4 w-4 inline-flex justify-center items-center' />
-				</div>
 			</div>
 			<div className='py-2'>
 				<div className='container'>
