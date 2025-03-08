@@ -51,7 +51,7 @@ export const Header = () => {
 							</Link>
 
 							{/* Show Log In if no user, else show Profile */}
-							{auth && auth.user ? (
+							{auth?.user ? (
 								<Link href='/profile'>
 									<button className='btn btn-primary'>{auth.user.name}</button>
 								</Link>
