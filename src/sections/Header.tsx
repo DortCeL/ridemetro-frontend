@@ -1,10 +1,17 @@
+"use client";
+
 import ArrowRight from "@/assets/arrow-right.svg";
 import Logo from "@/assets/logotrain.png";
 import Image from "next/image";
 import MenuIcon from "@/assets/menu.svg";
 import Link from "next/link";
 
+import { useContext } from "react";
+import { AuthContext } from "@/context/AuthContext";
+
 export const Header = () => {
+	const auth = useContext(AuthContext);
+
 	return (
 		<header className='sticky top-0 backdrop-blur-md z-20'>
 			<div className='flex justify-center items-center py-3 bg-black text-white text-sm gap-3'>
@@ -36,13 +43,25 @@ export const Header = () => {
 							<Link href='/lostandfound' passHref>
 								Lost & Found
 							</Link>
-							<Link href='/' passHref>
+							<Link href='/complaints/complainbox' passHref>
 								Complaints
 							</Link>
 							<Link href='/' passHref>
 								Details
 							</Link>
-							<button className='btn btn-primary animate-bounce'>Log In</button>
+
+							{/* Show Log In if no user, else show Profile */}
+							{auth.user ? (
+								<Link href='/profile'>
+									<button className='btn btn-primary'>{auth.user.name}</button>
+								</Link>
+							) : (
+								<Link href='/login'>
+									<button className='btn btn-primary animate-bounce'>
+										Log In
+									</button>
+								</Link>
+							)}
 						</nav>
 					</div>
 				</div>

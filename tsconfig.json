@@ -29,7 +29,10 @@
 		"src/components/Clock.jsx",
 		"src/sections/Pricing.jsx",
 		"src/app/lostandfound/page.jsx",
-		"src/services/userService.js"
+		"src/services/userService.js",
+		"src/app/login/page.jsx",
+		"src/app/page.jsx",
+		"src/app/layout.jsx"
 	],
 	"exclude": ["node_modules"]
 }

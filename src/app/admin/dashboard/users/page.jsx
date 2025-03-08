@@ -8,6 +8,8 @@ import {
 	searchUsers,
 } from "@/services/userService";
 
+import { TicketDashboard } from "./TicketDashboard";
+
 export default function UserTable() {
 	const [users, setUsers] = useState([]);
 	const [loading, setLoading] = useState(true);
@@ -166,6 +168,8 @@ export default function UserTable() {
 					</tbody>
 				</table>
 			)}
+
+			<TicketDashboard />
 		</div>
 	);
 }
